@@ -1,16 +1,15 @@
 FROM adoptopenjdk:11-hotspot AS builder
-ARG service=config-service
 
 ENV USE_PROFILE local
 ENV GITHUB_USERNAME username
 ENV GITHUB_PERSONAL_ACCESS_TOKEN token
 ENV ENCRYPT_SECRET_KEY secret
 
-COPY $service/gradlew .
-COPY $service/gradle gradle
-COPY $service/build.gradle .
-COPY $service/settings.gradle .
-COPY $service/src src
+COPY gradlew .
+COPY gradle gradle
+COPY build.gradle .
+COPY settings.gradle .
+COPY src src
 RUN chmod +x ./gradlew
 RUN ./gradlew clean bootJar
 

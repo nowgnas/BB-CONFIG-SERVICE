@@ -1,0 +1,7 @@
+spring:
+  kafka:
+    bootstrap-servers: http://kafka:9092
+
+eureka:
+  service-url:
+    defaultZone: http://discovery-service:8761/eureka
