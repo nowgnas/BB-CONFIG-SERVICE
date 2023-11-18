@@ -7,8 +7,9 @@ spring:
   application:
     name: config-service
   cloud:
-    config:
+    bus:
       enabled: true
+    config:
       server:
         git:
           uri: https://github.com/lotteon2/FLOWERGARDEN.CONFIG.git
