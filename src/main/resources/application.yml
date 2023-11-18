@@ -1,0 +1,24 @@
+server:
+  port: 8888
+spring:
+  config:
+    activate:
+      on-profile: local, dev, prod
+  application:
+    name: config-service
+  cloud:
+    config:
+      server:
+        git:
+          uri: https://github.com/lotteon2/FLOWERGARDEN.CONFIG.git
+          username: ${github.username}
+          password: ${github.token}
+management:
+  endpoints:
+    web:
+      exposure:
+        include:
+          - "refresh"
+          - "bus-refresh"
+encrypt:
+  key: ${secret}
