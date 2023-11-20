@@ -12,7 +12,7 @@ spring:
     config:
       server:
         git:
-          uri: https://github.com/lotteon2/FLOWERGARDEN.CONFIG.git
+          uri: https://github.com/lotteon2/BB-CONFIG.git
           username: ${github.username}
           password: ${github.token}
 management:
