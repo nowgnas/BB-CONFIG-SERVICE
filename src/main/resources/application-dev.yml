@@ -1,6 +1,10 @@
 spring:
-  kafka:
-    bootstrap-servers: http://kafka:9092
+  cloud:
+    stream:
+      kafka:
+        binder:
+          default-broker-port: kafka:9093
+          brokers: kafka:9093
 
 eureka:
   client:

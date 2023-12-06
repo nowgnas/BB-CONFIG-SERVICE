@@ -8,6 +8,8 @@ spring:
     name: config-service
   cloud:
     bus:
+      kafka:
+        destination: config-topic
       enabled: true
     config:
       server:
