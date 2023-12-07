@@ -5,16 +5,7 @@ spring:
         binder:
           default-broker-port: kafka:9093
           brokers: kafka:9093
-  kafka:
-    producer:
-      bootstrap-servers: kafka:9093
-      key-serializer: org.apache.kafka.common.serialization.StringSerializer
-      value-serializer: org.apache.kafka.common.serialization.StringSerializer
-    consumer:
-      bootstrap-servers: kafka:9093
-      key-deserializer: org.apache.kafka.common.serialization.StringDeserializer
-      value-deserializer: org.apache.kafka.common.serialization.StringDeserializer
-      group-id: config-topic
+
 eureka:
   client:
     register-with-eureka: true
