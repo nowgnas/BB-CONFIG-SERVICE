@@ -26,3 +26,7 @@ management:
           - "bus-refresh"
 encrypt:
   key: ${secret}
+logging:
+  level:
+    org.apache.kafka: WARN
+    org.springframework.kafka: WARN
