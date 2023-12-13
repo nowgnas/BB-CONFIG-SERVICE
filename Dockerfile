@@ -1,4 +1,4 @@
-FROM adoptopenjdk:11-hotspot AS builder
+FROM amazoncorretto:11-alpine AS builder
 
 ENV USE_PROFILE local
 ENV GITHUB_USERNAME username
@@ -13,7 +13,7 @@ COPY src src
 RUN chmod +x ./gradlew
 RUN ./gradlew clean bootJar
 
-FROM adoptopenjdk:11-hotspot
+FROM amazoncorretto:11-alpine
 COPY --from=builder build/libs/*.jar app.jar
 
 ENTRYPOINT ["java", "-jar", \
